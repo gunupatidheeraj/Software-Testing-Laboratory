@@ -1,6 +1,6 @@
 ## Ex.No: 5 BINARY SEARCH (check whether the Binary Search and inspect for failures).
 
-## DATE: 
+## DATE: 10/09/24 
 
 ## REGISTER NUMBER : 212221040050
 
@@ -60,6 +60,34 @@ except ValueError:  # Catching specific exception for invalid integer conversion
 
 ## Output: 
 ```
+Enter the element to be searched: 10
+Element is present at index 3
+Test Case: Pass
+
+Enter the element to be searched: -6
+Element is not present in array
+Test Case: Pass
+
+Enter the element to be searched:
+Enter a valid input!
+Test Case: Fail
+
+Enter the element to be searched: 20
+Enter a valid input!
+Test Case: Pass
+
+Enter the element to be searched: 0.8
+Enter a valid input!
+Test Case: Fail
+
+Enter the element to be searched: @123
+Enter a valid input!
+Test Case: Fail
+
+Enter the element to be searched: -10 20
+Enter a valid input!
+Test Case: Fail
+
 ```
 ## Result:
 Thus, the python program to check the number is Armstrong number or not implemented and the output is verified successfully.
