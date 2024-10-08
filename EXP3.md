@@ -1,45 +1,39 @@
-# Ex.No: 3 To check the number is prime or not and inspect for failures.
- 
-### DATE: 10/09/2024                                                                           
+# Ex.No: 4 check the given number is Armstrong number or not and inspect for failures.
+### DATE:  17/09/2024                                                                  
 ### REGISTER NUMBER : 212221040050
 ### AIM: 
-Write a python program to check the number is prime or not and inspect for failures.
- 
+Write a python program to check the number is Armstrong number or not and inspect for failures.
+
 ### Algorithm:
-1. Start the program.
-2. Get the number to be checked from the user.
-3. If the number is less than or equal to 1, return "Not Prime".
-4. If the number is 2, return "Prime".
-5. Start the iteration from 3, For each iteration:
-6. If the number is divisible by the current iteration value, return "Not Prime".
-7. If the number is not divisible by any value from 2 to the square root, return "Prime".
-8. Stop the program.
+1.  Start the program.
+2.	Read an integer input number.
+3.	Initialize the variables current_digit, sum = 0, and num = number.
+4.	Repeat Steps 5 to 7 until num > 0
+5.	current_digit = (num % 10).
+6.	sum = sum + (current_digit * current_digit * current_digit). 7. Stop the program.
+7.	num = num / 10.
+8.	Check if sum == number. If true, print "It is an Armstrong Number." Otherwise, print "It is not an Armstrong Number."
+9.	Stop the program.
 
 ### Program:
-
 ```
-num = input()
-flag = 0
-
-if num.isnumeric():
-    z = int(num)
-    if z == 2:
-        flag = 1
-    if z > 2:
-        for i in range(2, z // 2):
-            if z % i == 0:
-                flag = 0
-                break
-        else:
-            flag = 1
-    if flag == 1:
-        print("Prime Number")
+x = input("Enter the input: ")
+if x.isnumeric():
+    x = int(x)
+    temp = x
+    cube = 0
+    while temp > 0:
+        digit = temp % 10
+        cube = cube + (digit ** 3)
+        temp //= 10
+    if cube == x:
+        print("Armstrong Number")
     else:
-        print("Not a Prime Number")
+        print("Not Armstrong Number")
 else:
-    print("Enter a Positive Number")
-
+    print("Enter a Positive Integer.")
 ```
+
 
 
 
@@ -53,28 +47,35 @@ else:
 
 ### Output:
 
+```
+Enter the Input: 0
+Armstrong Number
+
+Enter the Input: 153
+Armstrong Number
+
+Enter the Input: 44
+Not a Armstong Number
+
+Enter the Input: -153
+Not a Armstrong Number
+Reason: The input can only be a positive integer.
+
+Enter the Input: Teja
+Enter a positive integer
+Reason: The input can only be of a positive integer.
+
+Enter the Input: !@#
+Enter a positive integer
+Reason: The special characters are not allowed.
+
+
 
 ```
-Enter a Positive number: 2
-Prime number
 
-Enter a Positive number: 5
-Prime number
 
-Enter a Positive number: krishna
-Enter a positive number 
-Reason: Strings are not allowed
 
-Enter a Positive number: -1
-Enter a positive number
-Reason: Negative number are not allowed.
-
-Enter a Positive number: 1
-Not a Prime number 
-Reason: The entered number is not a prime number.
-
-```
 
 
 ### Result:
-Thus, the python program to check the number is prime or not is implemented and the output is verified successfully.
+Thus, the python program to check the number is Armstrong number or not implemented and the output is verified successfully.
